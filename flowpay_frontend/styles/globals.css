@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  font-family: Inter;
+}
+
+@keyframes barWidth {
+  0% {
+    width: 0%;
+  }
+  25% {
+    width: 50%;
+  }
+  50% {
+    width: 100%;
+  }
+  75% {
+    width: 50%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+@keyframes barWidth2 {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 50%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.horizontal-bar-wrap {
+  height: 4px;
+  width: 100%;
+  width: 100vw;
+  .bar {
+    position: relative;
+    width: 0%;
+    height: 100%;
+    margin: 0 auto;
+    animation: barWidth;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    &.bar1 {
+      animation-delay: 0s;
+      background: #00d47b;
+      top: 0;
+      z-index: 1;
+    }
+  }
+}
